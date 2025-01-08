@@ -5,10 +5,9 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io
-sudo docker --version
+sudo docker -v
 
 //Setup dependencies
-sudo apt update
 sudo apt install -y libgtk-3-0 libnotify4 libnss3 libxss1 libxtst6 xdg-utils libatspi2.0-0 libsecret-1-0
 
 //Setup node files
@@ -23,7 +22,6 @@ sudo dpkg --configure -a
 
 //Start session
 screen -S openledger_node
-openledger-node
 sudo apt-get install libgbm1
 sudo apt-get install libasound2
 sudo apt-get install libasound2t64
