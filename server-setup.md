@@ -1,4 +1,4 @@
-#Setup Docker  
+# Setup Docker  
 sudo apt remove docker docker-engine docker.io containerd runc  
 sudo apt install -y apt-transport-https ca-certificates curl software-properties-common  
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg  
@@ -7,10 +7,10 @@ sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io  
 sudo docker -v  
 
-#Setup dependencies  
+# Setup dependencies  
 sudo apt install -y libgtk-3-0 libnotify4 libnss3 libxss1 libxtst6 xdg-utils libatspi2.0-0 libsecret-1-0  
 
-#Setup node files  
+# Setup node files  
 wget https://cdn.openledger.xyz/openledger-node-1.0.0-linux.zip  
 apt install unzip  
 apt install screen  
@@ -20,11 +20,11 @@ sudo apt-get install -f
 sudo apt-get install desktop-file-utils  
 sudo dpkg --configure -a  
 
-#Start session  
+# Start session  
 screen -S openledger_node  
 sudo apt-get install libgbm1  
 sudo apt-get install libasound2  
 sudo apt-get install libasound2t64  
 
-#Start node  
+# Start node  
 openledger-node --no-sandbox  
