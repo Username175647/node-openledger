@@ -23,8 +23,8 @@ sudo dpkg -i openledger-node-1.0.0.deb
 sudo apt-get install -f
 sudo apt-get install desktop-file-utils
 sudo dpkg --configure -a
-# Start session
-echo "==========Start session=========="
+# Some setups
+echo "==========Some setups=========="
 sudo apt-get install libgbm1
 sudo apt-get install libasound2
 sudo apt-get install libasound2t64
